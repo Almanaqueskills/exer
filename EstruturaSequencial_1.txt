@@ -1,0 +1,228 @@
+import random
+
+x = random.randint(1,24)
+horas = x
+if horas >= 1 and horas <= 5:
+    print('boa madrugada')
+elif horas >= 6 and horas <= 12:
+    print('bom dia')
+elif horas >= 12 and horas <= 18:
+    print('boa tarde')
+else:
+    print('boa noite')
+print('são',  horas, 'horas')
+
+sim=random.randint(1,3)
+cor=sim
+print(sim)
+
+if cor == 1:
+    print('acelerar')
+elif cor == 2:
+    print('atenção')
+elif cor == 3:
+    print('parar')
+
+#//2. Faça um Programa que peça um número e então mostre a mensagem O número informado foi [número].
+num=(input('digite um numero: '))
+print(num)
+
+#//3. Faça um Programa que peça dois números e imprima a soma.
+num1=int(input('digite um numero: '))
+num2=int(input('Digite outro numeor: '))
+print(num1+num2)
+
+#//4. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+notaI=int(input('Valor da nota I :'))
+notaII=int(input('Valor da nota II :'))
+notaIII=int(input('Valor da nota III :'))
+notaIV=int(input('Valor da nota IV :'))
+soma_notas=(notaI+notaII+notaIII+notaIV/4)
+print(soma_notas)
+
+#//5. Faça um Programa que converta metros para centímetros.
+
+metros=int(input('coloque a metragem :'))
+metr=(metros*100)
+centimetros=metr
+print(centimetros)
+
+#//6. Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
+r=int(input('Qual o tamanho do raio em cm:'))
+comprimento=(2*r*3)
+print(comprimento)
+
+#//C → comprimento  formula "C=2*pi*r"
+#//r → raio
+#//π → (lê-se: pi) sendo comum considerá-la igual a 3,14 ou 3,1 ou até mesmo 3.
+
+#//7. Faça um Programa que calcule a área de um quadrado, 
+# em seguida mostre o dobro desta área para o usuário.
+quadrado=8
+soma_quadrado=(quadrado**2)
+sq=(soma_quadrado*2)
+print(sq)
+
+#//8. Faça um Programa que pergunte quanto você ganha por hora e o 
+# número de horas trabalhadas no mês. Calcule e mostre o total do 
+# seu salário no referido mês.
+ganho=int(input('quanto você ganha por hora:'))
+if ganho <= 10:
+    print('A vida esta dificil heim')
+elif ganho <= 15:
+    print('Já deu uma melhorada')
+else:
+    print('sera que fica rico assim')
+
+horas=int(input('número de horas trabalhadas no semana: '))
+soma_ga_hs=(4*horas*ganho)
+print('seu salario é', soma_ga_hs)
+
+# 9. Faça um Programa que peça a temperatura em graus Fahrenheit, 
+# transforme e mostre a temperatura em graus Celsius.
+# (32F-32)*5/9 = 0 Celsius
+# input digite 32 resultado tem que dar zero
+temp=int(input('Qual a temperatura em Fahrenheit:'))
+formula=((temp-32)*5/9)
+print(formula)
+
+# 10. Faça um Programa que peça a temperatura em graus Celsius, 
+# transforme e mostre em graus Fahrenheit.
+# formula (0 °C × 9/5) + 32 = 32 °F
+celsius=int(input('temperatura em graus Celsius: '))
+Fahrenheit=((0*9/5)+32)
+print(Fahrenheit)
+
+#11. Faça um Programa que peça 2 números inteiros e um número real. 
+# Calcule e mostre:
+# (A) o produto do dobro do primeiro com metade do segundo .
+# (B) a soma do triplo do primeiro com o terceiro.
+# (C) o terceiro elevado ao cubo.
+n1=int(input('Digite primeiro números inteiros: '))
+n2=int(input('Digite segundo números inteiros: '))
+nr=int(input('Digite um numeor real: '))
+dob=(n1*2+n2/2)
+triplo=(n1*3+nr)
+cubo=(nr**3)
+print('Questão A: ',dob)
+print('Questão B:',triplo)
+print('Questão C:',cubo)
+
+#12. Tendo como dados de entrada a altura de uma pessoa, 
+# construa um algoritmo que calcule seu peso ideal, 
+# usando a seguinte fórmula: (72.7*altura) - 58
+# Float(Pontos Flutuantes):
+
+altura=float(input("Coloque sua altura por gentileza: "))
+ideal=((72.7*altura)-58)
+print(ideal)
+
+# 14. João Papo-de-Pescador, homem de bem, comprou um microcomputador 
+# para controlar o rendimento diário de seu trabalho. 
+# Toda vez que ele tráz um peso de peixes maior que o estabelecido 
+# pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar
+# uma multa de R$ 4,00 por quilo excedente.
+# João precisa que você faça um programa que leia a variável peso 
+# (peso de peixes) e calcule o excesso. 
+# Gravar na variável excesso a quantidade de quilos além do limite e 
+# na variável multa o valor da multa que João deverá pagar. 
+# Imprima os dados do programa com as mensagens adequadas.
+peso=int(input('Quanto pesa o peixe: '))
+excesso=50
+multa=0
+if peso<excesso:
+    print('Excelente o peso não acedeu o regulamento')
+elif peso>excesso:
+    print('O peso excede o regulamento em: ')
+    excesso=peso-excesso
+    print(excesso,' quilos')
+    multa=excesso*4
+    print('A multa é de', multa, 'reais')
+
+# 15. Faça um Programa que pergunte quanto você ganha por hora e o número de 
+# horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido 
+# mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS 
+# e 5% para o sindicato, faça um programa que nos dê:
+horas_tb=float(input('Quantas horas você trabalha no mês...'))
+ganho_hrs=float(input('Quanto você ganha por hora trabalhada no mês...'))
+bruto=ganho_hrs*horas_tb
+print('Seu salário bruto é..', float(bruto))
+
+IR_11=((11*bruto)/100)
+inss_8=((8*bruto)/100)
+sindicato_5=((5*bruto)/100)
+print('IR (11%) : R$',IR_11,'INSS (8%) : R$',inss_8,'Sindicato ( 5%) : R$',sindicato_5)
+
+salario_liguido=(bruto-IR_11-inss_8-sindicato_5)
+print('Salário Liquido : R$',float(salario_liguido))
+# salário bruto. quanto pagou ao INSS.quanto pagou ao sindicato.
+#o salário líquido.
+
+#calcule os descontos e o salário líquido, conforme a tabela abaixo:
+#+ Salário Bruto : R$
+#- IR (11%) : R$
+#- INSS (8%) : R$
+#- Sindicato ( 5%) : R$
+#= Salário Liquido : R$
+#Obs.: Salário Bruto - Descontos = Salário Líquido
+
+# 16. Faça um programa para uma loja de tintas. O programa deverá 
+# pedir o tamanho em metros quadrados da área a ser pintada. 
+# Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e 
+# que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. 
+# Informe ao usuário a quantidades de latas de tinta a serem compradas 
+# e o preço total.
+import math
+
+print('Informe a largura e o comprimento da loja')
+tamanho_loja=(int(input('largura: '))*int(input('comprimento: ')))
+print('aréa total da loja', tamanho_loja)
+cobertura_tinta=(tamanho_loja/3)
+print('litros de tinta que você vai precisar ',math.ceil(cobertura_tinta))
+latas_tinta=(math.ceil((18/18)*(cobertura_tinta/18)))
+print(latas_tinta)
+custo=latas_tinta*80
+print('Vai custar R$',custo)
+
+#  import math
+#  Função built-in round(): Arredonda para cima ou para baixo
+#  Método math.floor(): Arredonda para baixo, até o inteiro mais próximo
+#  Método math.ceil(): Arredonda para cima, até o inteiro mais próximo
+
+# 17. Faça um Programa para uma loja de tintas. 
+# O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. 
+# Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados 
+# e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões 
+# de 3,6 litros, que custam R$ 25,00.
+#Informe ao usuário as quantidades de tinta a serem compradas e os respectivos 
+#preços em 3 situações:
+#comprar apenas latas de 18 litros;
+#comprar apenas galões de 3,6 litros;
+#misturar latas e galões, de forma que o desperdício de tinta seja menor. 
+#Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, 
+#considere latas cheias.
+import math
+
+print('sistema da loja')
+metros_q=100
+print('Aréa total em metros quadrados é:', metros_q)
+cobertura=metros_q/6
+print(' litros necessários',round(cobertura))
+lt_18_18=((18/18)*(cobertura/18))
+lt_3_25=((3.6/3.6)*(cobertura/3.6))
+print(' lata de 18 litros',round(lt_18_18),'\n','lata de 3.6 litros',round(lt_3_25))
+
+lt_media=(math.ceil((cobertura/18)+(cobertura/3.6)))
+print('latas de tinta mista entre 18l e 3.6: ',lt_media, 'latas de tintas')
+
+#18. Faça um programa que peça o tamanho de um arquivo 
+# para download (em MB) e a velocidade de um link de Internet (em Mbps), 
+# calcule e informe o tempo aproximado de download do arquivo usando 
+# este link (em minutos).
+
+a=20
+b=29
+print(a%b)
+tamanho = float(input('Tamanho do arquivo (MB): '))
+velocidade = float(input('Velocidade de Internet (MBps): '))
+print('Tempo aproximado de download: %.0f Minutos ' %((tamanho / velocidade) * 60))
